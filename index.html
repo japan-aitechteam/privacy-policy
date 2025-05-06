@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>プライバシーポリシー</title>
+  <title>プライバシーポリシー（iOS向け）</title>
   <style>
     body {
       font-family: sans-serif;
@@ -26,62 +26,59 @@
 </head>
 <body>
   <h1>プライバシーポリシー</h1>
-  <p>本アプリ（以下「当アプリ」）は、利用者のプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーでは、当アプリにおける利用者の情報の取り扱いについて説明します。</p>
+  <p>本アプリ（以下「当アプリ」）は、iOSユーザーのプライバシーを尊重し、個人情報の保護に努めます。本プライバシーポリシーでは、当アプリにおける情報の取り扱いについて説明します。</p>
 
   <h2>1. 取得する情報</h2>
-  <p>当アプリでは、以下の情報を取得する場合があります。</p>
+  <p>当アプリは以下の情報を取得することがあります。</p>
   <ul>
-    <li>ユーザーが撮影した食材等の写真（画像内に個人識別情報が含まれる可能性がある場合も含みます）</li>
-    <li>認識された食材データおよびカロリー情報（JSON形式）</li>
-    <li>レシピ情報およびカロリー情報（Cookpad API 経由）</li>
-    <li>広告配信のための端末識別情報（Google AdMob 等）</li>
-    <li>アプリの利用状況に関する情報（Google Analytics 等）</li>
-    <li>API キー取得のための外部サーバーとの通信ログ</li>
+    <li>ユーザーが撮影した画像（個人情報が写り込む可能性を含む）</li>
+    <li>画像認識結果（食材データ等）とカロリー情報</li>
+    <li>広告配信のためのデバイス識別情報（IDFAを含む）</li>
+    <li>アプリの利用状況データ（Firebase Analyticsなど）</li>
+    <li>外部APIサーバーとの通信ログ（APIキー取得等）</li>
   </ul>
 
   <h2>2. 利用目的</h2>
-  <p>取得した情報は、以下の目的で使用されます。</p>
+  <p>取得した情報は以下の目的で利用されます。</p>
   <ul>
-    <li>ChatGPT API（OpenAI）を利用した画像認識処理（例：食材のリスト化）</li>
-    <li>認識結果をJSON形式でスマートフォンに返すため</li>
-    <li>カロリー計算処理およびレシピ表示のため</li>
-    <li>レシピ・カロリー情報をアプリ内カレンダーへ保存するため</li>
-    <li>広告の最適化・パーソナライズのため</li>
-    <li>アプリの不具合調査や利用状況の分析のため</li>
-    <li>APIキーのセキュアな取得（Cloudflare 経由）</li>
+    <li>OpenAIのChatGPT APIによる画像解析とカロリー推定</li>
+    <li>解析結果をJSON形式でユーザー端末へ返送するため</li>
+    <li>カレンダー機能への保存や履歴管理のため</li>
+    <li>広告表示（バナー・インタースティシャル）の最適化</li>
+    <li>アプリ改善・不具合調査のための利用状況分析</li>
+    <li>Cloudflare経由によるAPIキーの安全な取得</li>
   </ul>
 
-  <h2>3. 第三者提供</h2>
-  <p>取得した情報は、法令に基づく場合を除き、第三者に提供することはありません。</p>
-  <p>ただし、広告配信や利用状況解析のため、以下の第三者サービスに情報が送信される場合があります。これらは当該サービス提供者のプライバシーポリシーに基づいて取り扱われます。</p>
-  <ul>
-    <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob プライバシーポリシー</a></li>
-    <li><a href="https://support.google.com/analytics/answer/6004245" target="_blank">Google Analytics プライバシーポリシー</a></li>
-  </ul>
+  <h2>3. App Tracking Transparency（ATT）とIDFA</h2>
+  <p>iOS 14以降、当アプリはAppleのAppTrackingTransparencyフレームワークに基づき、ユーザーにトラッキングの許可を求めます。ユーザーが許可した場合、広告配信の最適化のためにIDFA（広告識別子）を取得することがあります。</p>
 
-  <h2>4. 利用している外部サービス</h2>
-  <p>当アプリでは、以下の外部サービスを利用しています。</p>
+  <h2>4. 第三者提供</h2>
+  <p>法令に基づく場合を除き、個人情報を第三者に提供することはありません。ただし、以下の第三者サービスにはデータが送信されることがあります。</p>
   <ul>
-    <li>Google AdMob（広告配信）</li>
-    <li>Google Analytics for Firebase（利用状況解析）</li>
-    <li>OpenAI ChatGPT API（画像認識およびカロリー推定）</li>
-    <li>Cloudflare Workers（APIキーの保護および中継）</li>
-    <li>Cookpad（レシピ・食材データ取得）</li>
+    <li><a href="https://policies.google.com/privacy" target="_blank">Google AdMob（広告配信）</a></li>
+    <li><a href="https://support.google.com/analytics/answer/6004245" target="_blank">Firebase Analytics（利用状況分析）</a></li>
+    <li><a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAI API（画像処理・カロリー推定）</a></li>
   </ul>
-  <p>なお、ChatGPT API（OpenAI）に送信される画像データは、OpenAIのポリシーに従い、<strong>処理目的のみに使用され、モデルの学習や改善には使用されません</strong>。処理後は適切に削除され、サーバーに長期間保存されることはありません。</p>
-  <p>参考：<a href="https://openai.com/policies/api-data-usage-policies" target="_blank">OpenAI APIのデータ利用ポリシー</a></p>
 
   <h2>5. 情報の保存と管理</h2>
   <ul>
-    <li>取得された食材データ・カロリー情報・レシピ情報は、ユーザーのスマートフォン内に保存されます。</li>
-    <li>画像データはアプリ内で一時的に処理され、サーバー上には保存されません。</li>
-    <li>通信は暗号化されており、不正アクセスや漏洩の防止に努めています。</li>
-    <li>Cloudflare によって API キーは外部に漏洩しないよう保護されています。</li>
+    <li>画像認識結果やカロリー情報はユーザー端末に保存されます</li>
+    <li>画像データは一時的に処理され、サーバーには保存されません</li>
+    <li>通信はSSL等により暗号化され、外部漏洩を防止しています</li>
+    <li>APIキーはCloudflareにより安全に中継・管理されています</li>
   </ul>
 
-  <h2>6. お問い合わせ</h2>
-  <p>本ポリシーに関するご質問やご不明点がある場合は、以下のメールアドレスまでご連絡ください。</p>
+  <h2>6. 利用している主な外部サービス</h2>
+  <ul>
+    <li>Google AdMob（バナー広告・インタースティシャル広告）</li>
+    <li>Firebase Analytics（利用解析）</li>
+    <li>OpenAI ChatGPT API（画像認識・カロリー推定）</li>
+    <li>Cloudflare Workers（API中継・保護）</li>
+  </ul>
+
+  <h2>7. お問い合わせ</h2>
+  <p>ご不明な点がある場合は以下までお問い合わせください。</p>
   <p>開発者名：AI Tech Apps</p>
-  <p>連絡先：aitech.apps00001111@gmail.com</p>
+  <p>メールアドレス：aitech.apps00001111@gmail.com</p>
 </body>
 </html>
