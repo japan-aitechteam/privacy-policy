@@ -1,2 +1,2 @@
 # privacy-policy
-Privacy policy for my Android app.
+Privacy policy for my iOS app.
